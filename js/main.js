@@ -27,11 +27,12 @@ $(document).ready(function() {
         var bMax55 = bMax * 0.55;
         var bMax50 = bMax * 0.50;
 
+        $('#output1-container').show(); /* Shows output when calculate button is clicked  */
         /*function onerepMax(weight, reps) {
             return weight * (1 + (reps/30))
         };*/
 
-        /* Epley Formular Output */
+        /* Epley Formula Output */
         $('#output').html('1 RM: ' + eMax.toFixed(1));
         $('#e-output-95').html('95%: ' + eMax95.toFixed(1));
         $('#e-output-90').html('90%: ' + eMax90.toFixed(1));
@@ -44,7 +45,7 @@ $(document).ready(function() {
         $('#e-output-55').html('55%: ' + eMax55.toFixed(1));
         $('#e-output-50').html('50%: ' + eMax50.toFixed(1));
 
-        /* Brzycki Formular Output */
+        /* Brzycki Formula Output */
         $('#output2').html('1 RM: ' + bMax.toFixed(1));
         $('#b-output-95').html('95%: ' + bMax95.toFixed(1));
         $('#b-output-90').html('90%: ' + bMax90.toFixed(1));

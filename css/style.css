@@ -44,7 +44,19 @@ html, body {
 
 /*------------------------------------- OUTPUT SECTION -------------------------------------*/
 .output1-container {
-    
+    display: flex;
+    margin: 0 auto;
+    width: 500px;
+    padding-top: 20px;
+    padding-left: 100px;
+}
+
+.output1-container li {
+    margin-left: -15px;
+}
+
+.epley-section {
+    padding-right: 50px;
 }
 
 .epley-section li {
@@ -59,5 +71,13 @@ html, body {
     #weight, #reps {
         width: auto;
         height: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .output1-container {
+        display: block;
+        width: auto;
+        margin: 0 auto;
     }
 }
