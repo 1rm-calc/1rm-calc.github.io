@@ -8,12 +8,14 @@
         <title>1RM Calculator</title>
 
         <link href="css/style.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header>
             <h1 class="calc-title">Weightlifting Calculator</h1>
         </header>
         
+        <!-- One Rep Max Calculator -->
         <div class="input1-container">
             <div class="onerm-input">
                 <h3>One Rep Max Calculator</h3>       
@@ -61,8 +63,30 @@
                         <li id="b-output-50"></li>
                     </ul>
                 </div>
+
+                <div class="close-1rm-output">
+                    <input id="close-btn" type="button" value="Close">
+                </div>
             </div> 
             
+        </div>
+
+        <!-- Weight Conversion -->
+        <div class="conversion-container">
+            <h3>Pounds &hArr; Kilogram</h3>
+            <div class="conversion-input">
+                <form>
+                    <input class="weight-conversion" id="kg-to-lbs" type="number" placeholder="Convert kg to lbs">
+                    <input class="weight-conversion" id="kg-submit" type="button" value="Convert">
+                    <br>
+                    <li id="kg-to-lbs-output"></li>
+                    <br>
+                    <input class="weight-conversion" id="lbs-to-kg" type="number" placeholder="Convert lbs to kg">
+                    <input class="weight-conversion" id="lbs-submit" type="button" value="Convert">
+                    <br>
+                    <li id="lbs-to-kg-output"></li>
+                    </form>
+            </div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

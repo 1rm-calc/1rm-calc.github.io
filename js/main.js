@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    /* 1 RM CALCULATOR */
     $('#onerm-submit').click(function() {
         var weight = $('#weight').val();
         var reps = $('#reps').val();
@@ -28,6 +29,10 @@ $(document).ready(function() {
         var bMax50 = bMax * 0.50;
 
         $('#output1-container').show(); /* Shows output when calculate button is clicked  */
+
+        $('#close-btn').click(function() { /* Hide output when close button is clicked */
+            $('#output1-container').hide();
+        })
         /*function onerepMax(weight, reps) {
             return weight * (1 + (reps/30))
         };*/
@@ -57,5 +62,22 @@ $(document).ready(function() {
         $('#b-output-60').html('60%: ' + bMax60.toFixed(1));
         $('#b-output-55').html('55%: ' + bMax55.toFixed(1));
         $('#b-output-50').html('50%: ' + bMax50.toFixed(1));
+    })
+
+    /* WEIGHT CONVERSION */
+    /* Kilogram to Pounds */
+    $('#kg-submit').click(function() {
+        var kgInput = $('#kg-to-lbs').val();
+        var poundsOutput = kgInput * 2.2046;
+
+        $('#kg-to-lbs-output').html(poundsOutput.toFixed(1) + ' lbs');
+    })
+
+    /* Pounds to Kilogram */
+    $('#lbs-submit').click(function() {
+        var lbsInput = $('#lbs-to-kg').val();
+        var kgOutput = lbsInput / 2.2046;
+
+        $('#lbs-to-kg-output').html(kgOutput.toFixed(1) + ' kg');
     })
 });
